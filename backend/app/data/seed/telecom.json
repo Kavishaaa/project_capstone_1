@@ -1,0 +1,201 @@
+{
+  "industry": "Telecom",
+  "customers": [
+    {
+      "id": "TEL-CUST-001",
+      "name": "Jonathan Reyes",
+      "email": "j.reyes@example.com",
+      "phone": "+1-214-555-0113",
+      "account_number": "ACCT-4482910",
+      "policy_or_account_type": "Postpaid Mobile Plan - Unlimited",
+      "tier": "Gold",
+      "since": "2019-06-14",
+      "notes": "Frequent international traveler for work. Has disputed roaming charges once before; dispute was resolved in his favor."
+    },
+    {
+      "id": "TEL-CUST-002",
+      "name": "Simone Fairweather",
+      "email": "simone.fair@example.com",
+      "phone": "+1-503-555-0187",
+      "account_number": "ACCT-3391764",
+      "policy_or_account_type": "Home Broadband + TV Bundle",
+      "tier": "Standard",
+      "since": "2022-02-09",
+      "notes": "Works from home and relies on broadband for video calls. Has reported intermittent outages twice in the past month."
+    },
+    {
+      "id": "TEL-CUST-003",
+      "name": "Derrick Osei-Wusu",
+      "email": "d.oseiwusu@example.com",
+      "phone": "+1-678-555-0164",
+      "account_number": "ACCT-5507223",
+      "policy_or_account_type": "Prepaid Mobile Plan",
+      "tier": "Standard",
+      "since": "2023-11-30",
+      "notes": "Recently relocated out of state; requested to close his home broadband line early due to the move."
+    }
+  ],
+  "tickets": [
+    {
+      "id": "TEL-TKT-2001",
+      "customer_id": "TEL-CUST-001",
+      "subject": "Disputed roaming charges - business trip to Germany",
+      "description": "Customer was billed $412.60 in international data roaming charges during a 5-day business trip to Germany, despite believing he had enabled the $10/day international pass before departure.",
+      "resolution": "Reviewed account activation logs and confirmed the international pass request failed silently due to a network error at time of purchase. Applied a full roaming charge credit of $412.60 and manually enabled the international pass for the customer's upcoming trip.",
+      "status": "Resolved",
+      "priority": "High",
+      "channel": "Phone",
+      "agent_name": "Alicia Ferreira",
+      "handle_time_minutes": 18,
+      "csat_score": 5,
+      "first_contact_resolution": true,
+      "created_at": "2026-05-19T11:07:00"
+    },
+    {
+      "id": "TEL-TKT-2002",
+      "customer_id": "TEL-CUST-002",
+      "subject": "Repeated broadband outages - third occurrence this month",
+      "description": "Customer reported her home broadband service has gone down three times in the past month, each lasting several hours, disrupting work-from-home video calls. She is requesting compensation and a permanent fix.",
+      "resolution": "Escalated to Field Network Operations, who identified a degraded fiber node in her service area serving 40+ households. A technician replaced the node and issued a proactive service credit for 6 days of degraded service (14.5% of monthly bill) per the outage credit policy.",
+      "status": "Escalated",
+      "priority": "High",
+      "channel": "Chat",
+      "agent_name": "Marcus Trent",
+      "handle_time_minutes": 26,
+      "csat_score": 4,
+      "first_contact_resolution": false,
+      "created_at": "2026-06-08T15:33:00"
+    },
+    {
+      "id": "TEL-TKT-2003",
+      "customer_id": "TEL-CUST-003",
+      "subject": "Early termination fee dispute after relocation",
+      "description": "Customer was charged a $180 early termination fee for canceling his home broadband line 8 months into a 24-month contract. He states he moved to a state where the provider has no service coverage and has submitted his new lease as proof.",
+      "resolution": "Verified new address against the coverage map confirming no service availability, and received the signed lease dated within the required 30-day window. Waived the $180 early termination fee in full under the documented relocation exception and closed the account without penalty.",
+      "status": "Resolved",
+      "priority": "Medium",
+      "channel": "Email",
+      "agent_name": "Priya Chandrasekaran",
+      "handle_time_minutes": 21,
+      "csat_score": 5,
+      "first_contact_resolution": true,
+      "created_at": "2026-07-02T10:15:00"
+    }
+  ],
+  "transcripts": [
+    {
+      "id": "TEL-CONV-3001",
+      "customer_id": "TEL-CUST-001",
+      "subject": "Disputed roaming charges from Germany trip",
+      "status": "Resolved",
+      "agent_name": "Alicia Ferreira",
+      "turns": [
+        {"sender": "customer", "text": "Hi, I just got my bill and there's over $400 in roaming charges from my trip to Germany last week. I definitely turned on the international day pass before I left."},
+        {"sender": "agent", "text": "I'm sorry about that surprise, Jonathan. Let me pull up account ACCT-4482910 and check the activation history for that trip."},
+        {"sender": "customer", "text": "Thank you. I remember adding it through the app the night before my flight, so I'm confused why it didn't apply."},
+        {"sender": "agent", "text": "I see the request in our system - it looks like the activation actually failed due to a network error on our end, but you were never notified that it didn't go through. That's on us, not you."},
+        {"sender": "customer", "text": "Okay, that's a relief to hear it wasn't something I did wrong. So what happens with the $412.60 in charges?"},
+        {"sender": "agent", "text": "Since the failure was a system error, I'm issuing a full credit for the $412.60 in roaming charges. You should see it reflected on your account within 1-2 billing cycles, though I can also request an immediate adjustment."},
+        {"sender": "customer", "text": "Immediate would be great, and can you make sure this doesn't happen again? I travel for work pretty often."},
+        {"sender": "agent", "text": "Absolutely. I'm processing the immediate credit now, and I've also manually activated the international day pass for your next scheduled trip so there's no repeat of this activation issue."},
+        {"sender": "customer", "text": "Perfect, I really appreciate you sorting this out quickly."}
+      ]
+    },
+    {
+      "id": "TEL-CONV-3002",
+      "customer_id": "TEL-CUST-002",
+      "subject": "Recurring broadband outages and service credit",
+      "status": "Escalated",
+      "agent_name": "Marcus Trent",
+      "turns": [
+        {"sender": "customer", "text": "This is the third time this month my internet has gone completely down. I work from home and I've now missed two client calls because of it."},
+        {"sender": "agent", "text": "I'm really sorry to hear that, Simone. Let me check the outage history on your broadband line for account ACCT-3391764."},
+        {"sender": "customer", "text": "I've called about this before and nothing actually got fixed - it just happens again a week or two later."},
+        {"sender": "agent", "text": "You're right, I can see two prior outage reports in the last month. That pattern suggests this isn't a one-off issue on your end, it looks like something on our network in your area."},
+        {"sender": "customer", "text": "So what are you actually going to do about it this time?"},
+        {"sender": "agent", "text": "I'm escalating this directly to our Field Network Operations team to inspect the fiber node serving your neighborhood, rather than just resetting your modem again. I'm also applying a service credit for the outage time you've experienced."},
+        {"sender": "customer", "text": "How much of a credit, and when will a technician actually come look at it?"},
+        {"sender": "agent", "text": "Based on roughly 6 days of degraded or lost service this month, you'll receive a credit of about 14.5% of your monthly bill. Field Ops will be notified today and should dispatch within 2 business days given the recurrence pattern."},
+        {"sender": "customer", "text": "Okay, I'll give it one more chance since you're actually looking at the network this time."}
+      ]
+    }
+  ],
+  "kb_articles": [
+    {
+      "id": "TEL-KB-01",
+      "source_type": "kb",
+      "title": "International Roaming Charge Dispute Process",
+      "content": "Customers who believe they were incorrectly charged roaming rates despite enabling an international pass should have the agent check the pass activation log for the specific trip dates. If the activation request was submitted but failed due to a system or network error, the customer is not liable for the resulting roaming charges and a full credit should be issued. If the pass was never requested, standard roaming rates apply and the charge stands unless a goodwill credit is authorized by a supervisor. Credits can be issued as immediate account adjustments rather than waiting for the next billing cycle when requested.",
+      "tags": "roaming,dispute,international,billing,credit"
+    },
+    {
+      "id": "TEL-KB-02",
+      "source_type": "kb",
+      "title": "Service Outage Credit Eligibility Guidelines",
+      "content": "Customers experiencing a broadband or mobile service outage lasting more than 4 continuous hours, or 2 or more outages within a 30-day period, are eligible for a prorated service credit reflecting the total downtime as a percentage of the monthly bill. Repeated outages reported by multiple customers in the same service area should be flagged as a network-level issue and escalated to Field Network Operations rather than resolved with a modem reset alone. Agents should proactively offer the credit rather than requiring the customer to request it.",
+      "tags": "outage,service credit,broadband,network,escalation"
+    },
+    {
+      "id": "TEL-KB-03",
+      "source_type": "kb",
+      "title": "Early Termination Fee Waiver for Documented Relocation",
+      "content": "Customers canceling a fixed-term contract early due to relocation to an address where the company has no service coverage may qualify for a full early termination fee waiver. The agent must verify the new address against the internal coverage map showing no availability and obtain proof of relocation (signed lease, closing document, or utility bill) dated within 30 days of the requested cancellation date. If both conditions are met, the fee is waived in full and the account is closed without penalty.",
+      "tags": "early termination,relocation,waiver,fee,contract"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "TEL-FAQ-01",
+      "source_type": "faq",
+      "title": "Why was I charged for roaming even though I added an international pass?",
+      "content": "In rare cases, an international pass activation request can fail silently due to a system error, leaving the account on standard roaming rates without the customer being notified. If this happens, contact support with your travel dates so the activation log can be checked and a full credit issued if the failure was on our end.",
+      "tags": "roaming,pass,billing,FAQ"
+    },
+    {
+      "id": "TEL-FAQ-02",
+      "source_type": "faq",
+      "title": "Am I entitled to a credit if my service goes out?",
+      "content": "Yes. If your broadband or mobile service is down for more than 4 continuous hours, or you experience 2 or more outages in a 30-day period, you're eligible for a prorated credit based on the outage duration. Credits are typically applied within 1-2 billing cycles, or immediately upon request.",
+      "tags": "outage,credit,FAQ"
+    }
+  ],
+  "policies": [
+    {
+      "id": "TEL-POL-01",
+      "source_type": "policy",
+      "title": "International Roaming Billing Policy",
+      "content": "Clause 8.4: Charges for international data, voice, or SMS usage shall be billed at standard roaming rates unless an eligible international pass has been successfully activated on the account prior to usage. Clause 8.5: Where account records confirm a pass activation request was submitted but failed due to a documented system or network error, the customer shall not be held liable for resulting roaming charges and a full credit shall be issued upon verification.",
+      "tags": "roaming,billing,policy clause,international"
+    },
+    {
+      "id": "TEL-POL-02",
+      "source_type": "policy",
+      "title": "Service Credit Policy for Network Outages",
+      "content": "Clause 11.2: A prorated service credit shall be issued to any customer experiencing a single outage exceeding 4 continuous hours, or 2 or more outages within a rolling 30-day period, calculated as the affected downtime divided by the total days in the billing cycle. Clause 11.3: Outages affecting multiple accounts within a common service area shall be logged as a network-level incident and referred to Field Network Operations for root-cause remediation.",
+      "tags": "outage,service credit,policy clause,network"
+    },
+    {
+      "id": "TEL-POL-03",
+      "source_type": "policy",
+      "title": "Early Termination Fee Waiver Policy",
+      "content": "Clause 15.7: An early termination fee shall be waived in full where the customer relocates to an address confirmed via the internal coverage map to be outside the company's service area. Clause 15.8: Waiver approval requires proof of relocation - a signed lease, mortgage closing document, or dated utility bill - submitted within 30 days of the requested cancellation date. Clause 15.9: Absent qualifying documentation, the standard early termination fee schedule applies based on remaining contract months.",
+      "tags": "early termination,relocation,policy clause,waiver"
+    }
+  ],
+  "sops": [
+    {
+      "id": "TEL-SOP-01",
+      "source_type": "sop",
+      "title": "SOP-TEL-05: Handling International Roaming Charge Disputes",
+      "content": "Step 1: Ask the customer for exact travel dates and the method used to request the international pass. Step 2: Check the account activation log for a matching pass request during the travel window. Step 3: If the request failed due to a system or network error, confirm the customer is not liable and prepare a full credit for the roaming charges incurred. Step 4: If no pass request exists, explain standard roaming rates apply and offer to enable a pass going forward. Step 5: Process the credit as an immediate adjustment when requested, and document the root cause in the case file. Step 6: Proactively activate an international pass for any known upcoming trips to prevent recurrence.",
+      "tags": "SOP,roaming,dispute,billing"
+    },
+    {
+      "id": "TEL-SOP-02",
+      "source_type": "sop",
+      "title": "SOP-TEL-09: Outage Credit and Escalation Procedure",
+      "content": "Step 1: Confirm outage duration and check for prior outage reports on the account within the last 30 days. Step 2: If the outage exceeds 4 continuous hours, or is the 2nd or later occurrence in 30 days, calculate and apply the prorated service credit without requiring the customer to ask. Step 3: Check whether other accounts in the same service area have reported similar outages; if so, log it as a network-level incident. Step 4: Escalate network-level incidents to Field Network Operations for technician dispatch rather than resolving with a remote reset alone. Step 5: Communicate the credit amount and expected technician timeline clearly to the customer. Step 6: Document the escalation and follow up if the technician has not resolved the issue within 2 business days.",
+      "tags": "SOP,outage,escalation,service credit"
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "industry": "Insurance",
+  "customers": [
+    {
+      "id": "INS-CUST-001",
+      "name": "Rebecca Ainsworth",
+      "email": "r.ainsworth@example.com",
+      "phone": "+1-312-555-0142",
+      "account_number": "POL-88213456",
+      "policy_or_account_type": "Auto Insurance - Comprehensive",
+      "tier": "Gold",
+      "since": "2018-03-11",
+      "notes": "Two prior claims, both approved without dispute. Prefers email contact."
+    },
+    {
+      "id": "INS-CUST-002",
+      "name": "Marcus Devereaux",
+      "email": "marcus.dev@example.com",
+      "phone": "+1-704-555-0198",
+      "account_number": "POL-77102938",
+      "policy_or_account_type": "Homeowners Insurance",
+      "tier": "Standard",
+      "since": "2021-07-22",
+      "notes": "First-time claimant. Filed a water damage claim last month, currently pending review."
+    },
+    {
+      "id": "INS-CUST-003",
+      "name": "Priya Natarajan",
+      "email": "priya.n@example.com",
+      "phone": "+1-408-555-0176",
+      "account_number": "POL-99887711",
+      "policy_or_account_type": "Health Insurance - Family Plan",
+      "tier": "Platinum",
+      "since": "2015-01-05",
+      "notes": "Long-tenured, high-value customer. Escalation-sensitive; has threatened to switch carriers once before."
+    }
+  ],
+  "tickets": [
+    {
+      "id": "INS-TKT-1001",
+      "customer_id": "INS-CUST-001",
+      "subject": "Auto claim denied - collision repair estimate",
+      "description": "Customer's collision claim for a rear-end accident was denied due to a missing police report attachment.",
+      "resolution": "Agent guided customer through the online claims portal to upload the police report; claim was reopened and approved within 48 hours for $4,230 in covered repairs.",
+      "status": "Resolved",
+      "priority": "Medium",
+      "channel": "Phone",
+      "agent_name": "Daniel Osei",
+      "handle_time_minutes": 14,
+      "csat_score": 5,
+      "first_contact_resolution": true,
+      "created_at": "2026-05-12T14:22:00"
+    },
+    {
+      "id": "INS-TKT-1002",
+      "customer_id": "INS-CUST-002",
+      "subject": "Homeowners water damage claim - status inquiry",
+      "description": "Customer called asking why his water damage claim (filed 3 weeks ago) has not been adjudicated yet.",
+      "resolution": "Escalated to senior claims adjuster due to SLA breach (21 days vs 14-day SOP target); adjuster contacted customer within 24 hours with an updated timeline.",
+      "status": "Escalated",
+      "priority": "High",
+      "channel": "Chat",
+      "agent_name": "Priya Sharma",
+      "handle_time_minutes": 22,
+      "csat_score": 3,
+      "first_contact_resolution": false,
+      "created_at": "2026-06-02T09:41:00"
+    },
+    {
+      "id": "INS-TKT-1003",
+      "customer_id": "INS-CUST-003",
+      "subject": "Health claim - out-of-network specialist denial",
+      "description": "Claim for a cardiology specialist visit was denied as out-of-network; customer disputes this since the referral came from an in-network PCP.",
+      "resolution": "Reviewed referral documentation and applied the in-network exception clause under the family plan; claim reprocessed and approved.",
+      "status": "Resolved",
+      "priority": "High",
+      "channel": "Phone",
+      "agent_name": "Daniel Osei",
+      "handle_time_minutes": 19,
+      "csat_score": 4,
+      "first_contact_resolution": true,
+      "created_at": "2026-04-28T16:05:00"
+    }
+  ],
+  "transcripts": [
+    {
+      "id": "INS-CONV-2001",
+      "customer_id": "INS-CUST-001",
+      "subject": "Auto claim denied - missing documentation",
+      "status": "Resolved",
+      "agent_name": "Priya Sharma",
+      "turns": [
+        {"sender": "customer", "text": "Hi, I got a letter saying my car accident claim was denied. I don't understand why, the accident wasn't my fault."},
+        {"sender": "agent", "text": "I'm sorry to hear that, Rebecca. Let me pull up your policy POL-88213456 right away. Can you confirm the claim number from your letter?"},
+        {"sender": "customer", "text": "Yes, it's CLM-556231. This is really frustrating, I've been a customer for years."},
+        {"sender": "agent", "text": "I completely understand the frustration. I can see the claim was denied because the police report wasn't attached to your submission - that's required for any collision claim over $2,000 under our comprehensive policy."},
+        {"sender": "customer", "text": "Oh, I didn't realize I needed to upload that separately. How do I fix this?"},
+        {"sender": "agent", "text": "No problem at all - you can upload it directly through the online claims portal under 'My Claims > Add Documents', or I can email you a secure upload link right now."},
+        {"sender": "customer", "text": "The link would be great, thank you."},
+        {"sender": "agent", "text": "Sending that now. Once the report is uploaded, the claim will automatically reopen and our adjusters typically resolve documentation-only denials within 48 hours."}
+      ]
+    },
+    {
+      "id": "INS-CONV-2002",
+      "customer_id": "INS-CUST-002",
+      "subject": "Water damage claim delay",
+      "status": "Escalated",
+      "agent_name": "Priya Sharma",
+      "turns": [
+        {"sender": "customer", "text": "It's been three weeks since I filed my water damage claim and I haven't heard anything. My kitchen ceiling is still damaged."},
+        {"sender": "agent", "text": "I'm sorry for the delay, Marcus. Let me look into claim status for your homeowners policy right now."},
+        {"sender": "customer", "text": "This is unacceptable, I have a family living in this house."},
+        {"sender": "agent", "text": "You're absolutely right to be concerned - I can see this has exceeded our standard 14-day adjudication window. I'm escalating this immediately to a senior claims adjuster."},
+        {"sender": "customer", "text": "Will someone actually call me, or will I just get another form letter?"},
+        {"sender": "agent", "text": "I'll personally flag this as an SLA breach so it gets priority handling, and I'm noting in the file that you should receive a direct phone call, not an automated letter, within 24 hours."}
+      ]
+    }
+  ],
+  "kb_articles": [
+    {
+      "id": "INS-KB-01",
+      "source_type": "kb",
+      "title": "Required Documentation for Auto Collision Claims",
+      "content": "All collision claims exceeding $2,000 require a police report to be attached before adjudication can proceed. Claims missing this documentation are automatically denied with a 'Documentation Incomplete' status. Customers can upload missing documents via the online claims portal (My Claims > Add Documents) or by emailing scanned copies to claims-docs@exlinsure.example.com. Once documentation is received, claims are automatically reopened and reprocessed, typically within 48 hours.",
+      "tags": "auto,collision,claims,documentation,police report"
+    },
+    {
+      "id": "INS-KB-02",
+      "source_type": "kb",
+      "title": "Homeowners Water Damage Claim Adjudication Timeline",
+      "content": "Standard water damage claims are adjudicated within 14 business days of filing, per SOP-INS-07. If a claim exceeds this window without adjuster contact, it must be escalated to a Senior Claims Adjuster and flagged as an SLA breach. Agents should proactively check claim age during any status inquiry call and escalate rather than simply restating 'still under review.'",
+      "tags": "homeowners,water damage,SLA,escalation,timeline"
+    },
+    {
+      "id": "INS-KB-03",
+      "source_type": "kb",
+      "title": "In-Network Referral Exception for Health Claims",
+      "content": "When a customer's in-network primary care physician refers them to a specialist who is technically out-of-network, the claim may still qualify for in-network cost-sharing under the Referral Exception Clause, provided the referral is documented in writing and made within 30 days of the specialist visit. Agents should request the referral letter or EHR record before escalating a denial dispute.",
+      "tags": "health,referral,out-of-network,exception,specialist"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "INS-FAQ-01",
+      "source_type": "faq",
+      "title": "Why was my claim denied for missing documentation?",
+      "content": "Claims are commonly denied when required supporting documents (police reports, photos, itemized repair estimates, or referral letters) are missing at submission time. This is not a permanent denial - once documents are uploaded, the claim automatically reopens for review.",
+      "tags": "claim denial,documentation,FAQ"
+    },
+    {
+      "id": "INS-FAQ-02",
+      "source_type": "faq",
+      "title": "How long does claim adjudication typically take?",
+      "content": "Auto claims: 5-7 business days after full documentation is received. Homeowners claims: up to 14 business days. Health claims: 10 business days. Any claim exceeding these windows should be escalated to a senior adjuster.",
+      "tags": "timeline,adjudication,FAQ"
+    }
+  ],
+  "policies": [
+    {
+      "id": "INS-POL-01",
+      "source_type": "policy",
+      "title": "Auto Comprehensive Coverage Policy - Documentation Requirements",
+      "content": "Clause 4.2: Collision claims exceeding $2,000 in estimated damages require a certified police report as a condition of adjudication. Clause 4.3: Claims may be denied pending documentation but are not permanently closed; customers have 60 days from the denial notice to submit missing materials before the claim is formally closed.",
+      "tags": "auto,comprehensive,documentation,policy clause"
+    },
+    {
+      "id": "INS-POL-02",
+      "source_type": "policy",
+      "title": "Homeowners Policy - Claims Service Level Commitments",
+      "content": "Clause 7.1: All property damage claims under $50,000 will receive an adjudication decision within 14 business days of complete submission. Clause 7.2: Claims exceeding this window automatically qualify for escalation to Senior Claims Adjuster review and a service credit may be issued at the discretion of the claims manager.",
+      "tags": "homeowners,SLA,service commitment,policy clause"
+    },
+    {
+      "id": "INS-POL-03",
+      "source_type": "policy",
+      "title": "Family Health Plan - Referral and Network Exceptions",
+      "content": "Clause 12.4: Services rendered by an out-of-network specialist pursuant to a documented in-network PCP referral shall be reimbursed at in-network cost-sharing rates, provided the referral is dated within 30 days of the specialist visit and submitted with the claim.",
+      "tags": "health,referral,network,policy clause"
+    }
+  ],
+  "sops": [
+    {
+      "id": "INS-SOP-01",
+      "source_type": "sop",
+      "title": "SOP-INS-04: Handling Documentation-Denied Auto Claims",
+      "content": "Step 1: Verify the specific missing document from the claim denial code. Step 2: Explain the requirement to the customer in plain language. Step 3: Offer the fastest applicable submission channel (portal upload preferred, email as fallback). Step 4: Confirm the claim will auto-reopen upon receipt; set expectation of 48-hour reprocessing. Step 5: Log the interaction and set a 48-hour follow-up reminder if no reopening is detected.",
+      "tags": "SOP,auto,documentation,denial handling"
+    },
+    {
+      "id": "INS-SOP-02",
+      "source_type": "sop",
+      "title": "SOP-INS-07: Escalation Criteria for Delayed Property Claims",
+      "content": "Step 1: On any status inquiry, check claim filing date against the 14-business-day adjudication SLA. Step 2: If SLA is breached, immediately escalate to Senior Claims Adjuster queue with priority flag 'SLA-BREACH'. Step 3: Commit to customer that a live phone call (not an automated letter) will occur within 24 hours. Step 4: Document escalation reason and expected adjuster contact time in the case file. Step 5: If customer expresses high dissatisfaction (CSAT risk), also notify the Team Lead.",
+      "tags": "SOP,homeowners,escalation,SLA"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "industry": "Travel",
+  "customers": [
+    {
+      "id": "TRV-CUST-001",
+      "name": "Elena Vasquez",
+      "email": "elena.vasquez@example.com",
+      "phone": "+1-415-555-0187",
+      "account_number": "EXL-FF-4821093",
+      "policy_or_account_type": "Frequent Flyer - Gold Elite",
+      "tier": "Gold Elite",
+      "since": "2017-09-14",
+      "notes": "High-mileage business traveler, flies transcontinental routes 2-3 times monthly. Sensitive to schedule disruptions due to client meetings."
+    },
+    {
+      "id": "TRV-CUST-002",
+      "name": "Robert Kim",
+      "email": "robert.kim@example.com",
+      "phone": "+1-206-555-0143",
+      "account_number": "EXL-INS-7734021",
+      "policy_or_account_type": "Travel Insurance Plan",
+      "tier": "Standard",
+      "since": "2023-11-02",
+      "notes": "Purchased Comprehensive Trip Protection add-on for a family vacation. First claim on file; no prior travel insurance history with us."
+    },
+    {
+      "id": "TRV-CUST-003",
+      "name": "Amara Okafor",
+      "email": "amara.okafor@example.com",
+      "phone": "+1-312-555-0219",
+      "account_number": "EXL-BK-2201987",
+      "policy_or_account_type": "Standard Booking Account",
+      "tier": "Silver",
+      "since": "2020-06-30",
+      "notes": "Books international connecting itineraries regularly. Previously filed one delayed-baggage claim in 2024 that was resolved satisfactorily."
+    }
+  ],
+  "tickets": [
+    {
+      "id": "TRV-TKT-3001",
+      "customer_id": "TRV-CUST-001",
+      "subject": "Flight cancellation - rebooking fare difference dispute",
+      "description": "Customer's flight MA782 (SFO to JFK, June 3) was cancelled by the airline due to a mechanical issue. Customer was rebooked on MA790 the next morning but was charged a $185 fare difference at the gate kiosk, which she disputes since the cancellation was airline-caused.",
+      "resolution": "Confirmed cancellation reason code as 'carrier - mechanical' in the ops log, which qualifies for involuntary rebooking under Clause 2.3. Reversed the $185 fare difference charge in full and issued a 5,000-mile goodwill credit to her Gold Elite account for the inconvenience.",
+      "status": "Resolved",
+      "priority": "Medium",
+      "channel": "Phone",
+      "agent_name": "Marcus Whitfield",
+      "handle_time_minutes": 16,
+      "csat_score": 5,
+      "first_contact_resolution": true,
+      "created_at": "2026-06-03T19:47:00"
+    },
+    {
+      "id": "TRV-TKT-3002",
+      "customer_id": "TRV-CUST-003",
+      "subject": "Lost baggage claim - checked bag missing after Amsterdam connection",
+      "description": "Customer's checked bag did not arrive on flight MA415 (Chicago to Nairobi via Amsterdam, July 9). Bag was confirmed offloaded during the tight connection in AMS. Customer filed baggage claim BAG-2249187 at the Nairobi arrivals desk.",
+      "resolution": "Provided the $50/day interim essentials allowance for days 1-3 per baggage compensation tiers. Bag was located and forwarded on day 4; delivered to customer's hotel. Issued a $150 total interim allowance plus a $75 service recovery voucher.",
+      "status": "Resolved",
+      "priority": "High",
+      "channel": "Chat",
+      "agent_name": "Sofia Lindqvist",
+      "handle_time_minutes": 21,
+      "csat_score": 4,
+      "first_contact_resolution": false,
+      "created_at": "2026-07-09T22:15:00"
+    },
+    {
+      "id": "TRV-TKT-3003",
+      "customer_id": "TRV-CUST-002",
+      "subject": "Refund request - trip cancelled due to winter storm closure",
+      "description": "Customer's family vacation to Denver (Feb 14-18) was cancelled after a NOAA winter storm advisory led to a 2-day airport closure at DEN. Customer is requesting reimbursement of $1,240 in prepaid nonrefundable hotel and car rental costs under his Travel Insurance Plan.",
+      "resolution": "Verified the NOAA advisory and DEN airport closure notice against the force-majeure refund criteria under Clause 9.1. Approved full reimbursement of $1,240 for prepaid nonrefundable hotel and car rental costs; payment issued to original payment method within 7 business days.",
+      "status": "Resolved",
+      "priority": "High",
+      "channel": "Email",
+      "agent_name": "Priya Chandrasekaran",
+      "handle_time_minutes": 18,
+      "csat_score": 5,
+      "first_contact_resolution": true,
+      "created_at": "2026-02-19T13:32:00"
+    }
+  ],
+  "transcripts": [
+    {
+      "id": "TRV-CONV-4001",
+      "customer_id": "TRV-CUST-001",
+      "subject": "Flight MA782 cancelled - rebooking and fare dispute",
+      "status": "Resolved",
+      "agent_name": "Marcus Whitfield",
+      "turns": [
+        {"sender": "customer", "text": "My flight MA782 from SFO to JFK just got cancelled and the gate agent rebooked me but charged my card an extra $185. I have a client meeting tomorrow morning, this is a mess."},
+        {"sender": "agent", "text": "I'm really sorry, Elena. Let me pull up your Gold Elite account and the flight record for MA782 right now. Can you confirm the new confirmation number they gave you at the gate?"},
+        {"sender": "customer", "text": "It's MA790, departing 6:10am tomorrow. But why was I charged at all if the airline cancelled the flight, not me?"},
+        {"sender": "agent", "text": "You're right to question that. I can see MA782 was cancelled with reason code 'carrier - mechanical,' which means this was airline-caused, not a voluntary change on your part. That fare difference should never have been charged."},
+        {"sender": "customer", "text": "So can you reverse it? That's $185 I shouldn't have had to pay."},
+        {"sender": "agent", "text": "Yes, I'm reversing the full $185 charge right now - you'll see it credited back to your card within 3-5 business days. I'm also confirming your seat on MA790 is locked in with no further charges."},
+        {"sender": "customer", "text": "Thank you, that helps a lot. This whole evening has been stressful."},
+        {"sender": "agent", "text": "Completely understandable. I'm also adding a 5,000-mile goodwill credit to your Gold Elite account for the disruption - you should see that post within 24 hours."},
+        {"sender": "customer", "text": "I appreciate that, Marcus. Thanks for sorting it out quickly."}
+      ]
+    },
+    {
+      "id": "TRV-CONV-4002",
+      "customer_id": "TRV-CUST-003",
+      "subject": "Missing checked bag after Amsterdam connection",
+      "status": "Resolved",
+      "agent_name": "Sofia Lindqvist",
+      "turns": [
+        {"sender": "customer", "text": "I landed in Nairobi last night and my checked bag never showed up. I connected through Amsterdam and I think it just didn't make the transfer."},
+        {"sender": "agent", "text": "I'm sorry to hear that, Amara. I see you already filed claim BAG-2249187 at the arrivals desk - let me check the tracking on that now for flight MA415."},
+        {"sender": "customer", "text": "Yes, that's the one. I have almost nothing with me, just my carry-on. What happens now?"},
+        {"sender": "agent", "text": "The system shows your bag was offloaded during the tight AMS connection and is being traced. In the meantime, you're eligible for our interim essentials allowance - $50 per day for up to 3 days while the bag is located."},
+        {"sender": "customer", "text": "Okay, that will help with toiletries and a change of clothes at least. How long does tracing usually take?"},
+        {"sender": "agent", "text": "Most bags in this situation are located within 2-4 days once they're picked up on the next connecting flight. I'll send the interim allowance to your account today and keep monitoring the trace."},
+        {"sender": "customer", "text": "Please keep me updated, I'm only here for a week."},
+        {"sender": "agent", "text": "Absolutely, I'll follow up personally. Good news is your bag was just scanned in Amsterdam and is on tonight's MA415 - it should reach your hotel by tomorrow afternoon via courier."},
+        {"sender": "customer", "text": "That's a relief, thank you for staying on top of it."}
+      ]
+    }
+  ],
+  "kb_articles": [
+    {
+      "id": "TRV-KB-01",
+      "source_type": "kb",
+      "title": "Flight Cancellation and Involuntary Rebooking Rules",
+      "content": "When a flight is cancelled for airline-caused reasons (mechanical, crew, or operational reason codes), affected customers must be rebooked on the next available flight at no additional cost, including any fare difference. Fare differences should never be charged for involuntary rebookings; if a charge occurs at the gate or kiosk, agents must reverse it in full immediately upon confirming the cancellation reason code in the ops log. Customers experiencing overnight disruptions of 4+ hours are eligible for a hotel and meal voucher per SOP-TRV-02. Weather- and ATC-caused cancellations follow the same rebooking priority but are not eligible for goodwill mileage credits.",
+      "tags": "flight cancellation,rebooking,fare difference,involuntary change"
+    },
+    {
+      "id": "TRV-KB-02",
+      "source_type": "kb",
+      "title": "Lost and Delayed Baggage Compensation Tiers",
+      "content": "Baggage delayed 0-24 hours: customer is eligible for a $50 interim essentials allowance. Baggage delayed 24-96 hours: $50/day continues, capped at $150 total. Baggage still missing after 21 days is officially classified as lost, and the customer may file a full loss claim up to the Montreal Convention liability limit of approximately $1,780 (SDR 1,288) for international itineraries, or up to $3,800 for domestic itineraries under carrier policy. Agents should always file a trace claim number (format BAG-#######) at first contact and proactively update the customer as trace status changes.",
+      "tags": "baggage,lost luggage,compensation,delay tiers"
+    },
+    {
+      "id": "TRV-KB-03",
+      "source_type": "kb",
+      "title": "Weather-Related Trip Cancellation Refund Eligibility",
+      "content": "Customers holding a Travel Insurance Plan may claim reimbursement for prepaid, nonrefundable trip costs when a covered trip is cancelled or significantly disrupted by a qualifying force-majeure weather event. Qualifying evidence includes an official NOAA/National Weather Service advisory, an airport closure notice, or a common-carrier cancellation record covering the travel dates. Claims must be submitted within 60 days of the cancelled trip date, with receipts for all nonrefundable expenses being claimed (hotel, car rental, tours, event tickets). Standard Booking Account holders without the insurance add-on are not eligible for these refunds and should instead be directed to the airline's standard change/cancellation fare rules.",
+      "tags": "trip cancellation,weather,refund,travel insurance,force majeure"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "TRV-FAQ-01",
+      "source_type": "faq",
+      "title": "What happens if my flight is cancelled by the airline?",
+      "content": "If your flight is cancelled for an airline-caused reason (mechanical, crew, or operational), you'll be automatically rebooked on the next available flight at no additional cost. If your original flight was cancelled less than 24 hours before departure or you're already at the airport, visit any gate agent or use the app's 'Rebook My Trip' tool for immediate self-service options. Overnight disruptions of 4+ hours may qualify for a hotel and meal voucher.",
+      "tags": "flight cancellation,rebooking,FAQ"
+    },
+    {
+      "id": "TRV-FAQ-02",
+      "source_type": "faq",
+      "title": "How do I file a claim for lost or delayed baggage?",
+      "content": "File a claim at the airport baggage services desk before leaving, or within 4 hours of arrival via the app under 'Trips > Report Baggage Issue.' You'll receive a trace claim number (format BAG-#######) and become eligible for the interim essentials allowance while your bag is located. If your bag remains missing after 21 days, it is classified as lost and you may file a full loss claim.",
+      "tags": "baggage,lost luggage,claim filing,FAQ"
+    }
+  ],
+  "policies": [
+    {
+      "id": "TRV-POL-01",
+      "source_type": "policy",
+      "title": "Involuntary Rebooking Entitlements Policy",
+      "content": "Clause 2.3: When a flight is cancelled or delayed for a carrier-caused reason, the airline shall rebook the affected customer on the next available flight to their ticketed destination at no additional cost, and any fare difference charged in error must be reversed in full upon verification of the cancellation reason code. Clause 2.4: Customers subject to an overnight disruption of four (4) hours or more due to a carrier-caused cancellation are entitled to a hotel accommodation voucher and a meal voucher of no less than $25 per affected traveler.",
+      "tags": "rebooking,cancellation,entitlements,policy clause"
+    },
+    {
+      "id": "TRV-POL-02",
+      "source_type": "policy",
+      "title": "Checked Baggage Liability and Compensation Policy",
+      "content": "Clause 5.1: For domestic itineraries, carrier liability for lost, damaged, or delayed checked baggage shall not exceed $3,800 per customer. For international itineraries, liability is governed by the Montreal Convention limit of SDR 1,288 (approximately $1,780). Clause 5.2: Customers with baggage delayed beyond 24 hours are entitled to an interim essentials allowance of $50 per day, capped at $150 total, pending recovery of the bag. Baggage unrecovered after 21 days shall be classified as lost and processed as a full loss claim.",
+      "tags": "baggage,liability,compensation,policy clause"
+    },
+    {
+      "id": "TRV-POL-03",
+      "source_type": "policy",
+      "title": "Travel Insurance Force-Majeure Refund Policy",
+      "content": "Clause 9.1: A customer holding an active Travel Insurance Plan is eligible for reimbursement of prepaid, nonrefundable trip expenses when a covered trip is cancelled or curtailed due to a qualifying force-majeure event, including but not limited to severe weather advisories, airport closures, or natural disasters affecting the traveler's origin or destination. Clause 9.2: Claims must be submitted within sixty (60) days of the affected trip date, accompanied by official evidence of the qualifying event and itemized receipts for each nonrefundable expense claimed. Clause 9.3: This entitlement does not extend to customers on a Standard Booking Account without an active insurance add-on.",
+      "tags": "travel insurance,force majeure,refund,policy clause"
+    }
+  ],
+  "sops": [
+    {
+      "id": "TRV-SOP-01",
+      "source_type": "sop",
+      "title": "SOP-TRV-02: Handling Airline-Caused Flight Cancellations and Rebooking",
+      "content": "Step 1: Confirm the cancellation reason code in the ops log to determine whether it is carrier-caused (mechanical, crew, operational) versus weather/ATC. Step 2: Rebook the customer on the next available flight to their ticketed destination at no additional cost. Step 3: If any fare difference was charged, reverse it immediately and confirm the reversal timeline (3-5 business days) to the customer. Step 4: If the disruption results in an overnight delay of 4+ hours, issue a hotel and meal voucher per Clause 2.4. Step 5: For carrier-caused disruptions affecting elite-tier frequent flyers, consider a goodwill mileage credit for the inconvenience. Step 6: Document the cancellation reason code, rebooking confirmation number, and any vouchers or credits issued in the case file.",
+      "tags": "SOP,cancellation,rebooking,gate,disruption"
+    },
+    {
+      "id": "TRV-SOP-02",
+      "source_type": "sop",
+      "title": "SOP-TRV-05: Lost Baggage Claim Intake and Compensation",
+      "content": "Step 1: Verify the baggage claim number (format BAG-#######) and confirm the flight, connection, and last scanned location. Step 2: Explain the interim essentials allowance ($50/day, capped at $150) and issue the first day's allowance immediately if the bag is delayed beyond 24 hours. Step 3: Initiate or check the baggage trace and provide the customer an estimated recovery window (typically 2-4 days). Step 4: Proactively follow up with trace status updates rather than waiting for the customer to call back. Step 5: If the bag is located, arrange courier delivery to the customer's current address and confirm delivery within 24 hours. Step 6: If the bag remains unrecovered after 21 days, transition the case to a full loss claim under the applicable liability limit and notify the customer of the classification change.",
+      "tags": "SOP,baggage,lost luggage,claim intake,compensation"
+    }
+  ]
+}

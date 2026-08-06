@@ -1,0 +1,201 @@
+{
+  "industry": "Healthcare",
+  "customers": [
+    {
+      "id": "HLT-CUST-001",
+      "name": "Denise Kowalski",
+      "email": "denise.kowalski@example.com",
+      "phone": "+1-216-555-0134",
+      "account_number": "MEM-40217765",
+      "policy_or_account_type": "PPO Health Plan",
+      "tier": "Gold",
+      "since": "2019-09-03",
+      "notes": "Chronic lower back pain, ongoing physical therapy. Previous prior-auth appeal for physical therapy sessions was successful."
+    },
+    {
+      "id": "HLT-CUST-002",
+      "name": "Harold Whitfield",
+      "email": "harold.whitfield@example.com",
+      "phone": "+1-615-555-0187",
+      "account_number": "MEM-88104432",
+      "policy_or_account_type": "Medicare Advantage Plan",
+      "tier": "Standard",
+      "since": "2022-01-15",
+      "notes": "Retired, on a fixed income; very sensitive to unexpected out-of-pocket costs. Prefers phone contact, hard of hearing so agents should speak slowly."
+    },
+    {
+      "id": "HLT-CUST-003",
+      "name": "Aisha Boateng",
+      "email": "aisha.boateng@example.com",
+      "phone": "+1-773-555-0159",
+      "account_number": "MEM-63290981",
+      "policy_or_account_type": "HSA-Eligible High Deductible Plan",
+      "tier": "Silver",
+      "since": "2023-04-27",
+      "notes": "Type 1 diabetic managing insulin therapy. Has an active HSA and tracks deductible spend closely."
+    }
+  ],
+  "tickets": [
+    {
+      "id": "HLT-TKT-1001",
+      "customer_id": "HLT-CUST-001",
+      "subject": "Prior authorization denied for lumbar spine MRI",
+      "description": "Customer's PCP-ordered lumbar spine MRI was denied by utilization management as 'not medically necessary' because conservative treatment (6 weeks of physical therapy) was not documented as attempted first.",
+      "resolution": "Agent contacted the ordering physician's office to obtain updated clinical notes confirming 8 weeks of completed physical therapy with no improvement. Notes were submitted with an expedited appeal; utilization management reversed the denial and the MRI was approved within 5 business days.",
+      "status": "Resolved",
+      "priority": "High",
+      "channel": "Phone",
+      "agent_name": "Marcus Webb",
+      "handle_time_minutes": 24,
+      "csat_score": 5,
+      "first_contact_resolution": false,
+      "created_at": "2026-05-18T10:15:00"
+    },
+    {
+      "id": "HLT-TKT-1002",
+      "customer_id": "HLT-CUST-002",
+      "subject": "Billing discrepancy - duplicate charge for outpatient colonoscopy",
+      "description": "Customer received an Explanation of Benefits showing two separate charges for the same outpatient colonoscopy procedure performed on 2026-04-02, resulting in a bill of $612 instead of the expected $180 copay.",
+      "resolution": "Reviewed the claim and confirmed the facility fee had been submitted twice under duplicate claim numbers due to a billing system resubmission error. Filed a corrected claim request with the provider's billing office; duplicate charge of $432 was reversed and customer's responsibility corrected to the standard $180 copay.",
+      "status": "Resolved",
+      "priority": "Medium",
+      "channel": "Phone",
+      "agent_name": "Latisha Green",
+      "handle_time_minutes": 18,
+      "csat_score": 4,
+      "first_contact_resolution": true,
+      "created_at": "2026-05-25T13:40:00"
+    },
+    {
+      "id": "HLT-TKT-1003",
+      "customer_id": "HLT-CUST-003",
+      "subject": "Formulary exception request for brand-name insulin",
+      "description": "Customer's endocrinologist prescribed a brand-name rapid-acting insulin; the plan's formulary only covers the generic-tier equivalent, and the pharmacy quoted a $340 out-of-pocket cost for the brand-name version.",
+      "resolution": "Collected clinical justification letter from the endocrinologist citing a documented adverse reaction to the generic formulation. Submitted formulary exception request to the Pharmacy and Therapeutics review team; exception was approved, reclassifying the brand-name insulin to preferred-tier cost-sharing for 12 months.",
+      "status": "Resolved",
+      "priority": "High",
+      "channel": "Chat",
+      "agent_name": "Marcus Webb",
+      "handle_time_minutes": 21,
+      "csat_score": 5,
+      "first_contact_resolution": false,
+      "created_at": "2026-06-09T15:52:00"
+    }
+  ],
+  "transcripts": [
+    {
+      "id": "HLT-CONV-2001",
+      "customer_id": "HLT-CUST-001",
+      "subject": "Prior authorization appeal for lumbar spine MRI",
+      "status": "Resolved",
+      "agent_name": "Marcus Webb",
+      "turns": [
+        {"sender": "customer", "text": "Hi, I just got a letter saying my MRI was denied. My doctor ordered it because my back pain won't go away. I don't understand what happened."},
+        {"sender": "agent", "text": "I'm sorry you're dealing with this, Denise. Before we go further, I need to verify your identity - can you confirm your date of birth and the last four digits of your member ID on account MEM-40217765?"},
+        {"sender": "customer", "text": "Sure, it's April 14th, 1979, and the last four are 7765."},
+        {"sender": "agent", "text": "Thank you, that's verified. I can see the MRI was denied because our utilization management team didn't have documentation showing you'd completed conservative treatment first, specifically at least 6 weeks of physical therapy, before imaging is authorized."},
+        {"sender": "customer", "text": "But I have been doing physical therapy for two months! My PT clinic has all the notes."},
+        {"sender": "agent", "text": "That's exactly what we need. If your PT clinic can send over notes confirming the duration and outcome of your sessions, I can file an expedited appeal today rather than waiting for the standard review cycle."},
+        {"sender": "customer", "text": "Okay, I can call them right now and have them fax it over. How long will the appeal take?"},
+        {"sender": "agent", "text": "Once we receive the clinical notes, expedited appeals for imaging denials are typically decided within 5 business days. I'll flag this file so it's reviewed as soon as the documentation arrives."},
+        {"sender": "customer", "text": "Thank you, that's a relief. I'll get that sent today."}
+      ]
+    },
+    {
+      "id": "HLT-CONV-2002",
+      "customer_id": "HLT-CUST-002",
+      "subject": "Unexpected billing charge for colonoscopy",
+      "status": "Resolved",
+      "agent_name": "Latisha Green",
+      "turns": [
+        {"sender": "customer", "text": "I got a bill for $612 for my colonoscopy last month and I was told my copay would only be $180. Something's not right here."},
+        {"sender": "agent", "text": "I understand the concern, Harold. For your security, can you verify your full name and the last four digits of your Medicare Advantage member ID on file?"},
+        {"sender": "customer", "text": "Harold Whitfield, and the last four are 0981... wait, no, let me check my card. It's 0981... hold on."},
+        {"sender": "agent", "text": "No rush at all, take your time."},
+        {"sender": "customer", "text": "Sorry, here it is - 0432."},
+        {"sender": "agent", "text": "Thank you, that's verified. Looking at your claim from April 2nd, I can see the facility submitted the procedure charge twice, under two separate claim numbers. That looks like a duplicate billing error on their end, not an increase in your actual responsibility."},
+        {"sender": "customer", "text": "So I don't actually owe $612? That's what worried me most, I'm on a fixed income."},
+        {"sender": "agent", "text": "I completely understand, and no, you should not owe that. I'm filing a corrected claim request with the facility's billing office right now to reverse the duplicate $432 charge, which brings your responsibility back to the standard $180 copay."},
+        {"sender": "customer", "text": "That's a huge relief. Thank you for looking into this so carefully."}
+      ]
+    }
+  ],
+  "kb_articles": [
+    {
+      "id": "HLT-KB-01",
+      "source_type": "kb",
+      "title": "Prior Authorization Appeal Process for Denied Imaging and Procedures",
+      "content": "When a prior authorization is denied for advanced imaging (MRI, CT, PET) or a procedure, the most common reason is missing documentation of required conservative treatment (e.g., physical therapy) or insufficient clinical justification. Agents should first identify the specific denial reason code, then contact the ordering physician's office to obtain updated clinical notes addressing that gap. Standard appeals are decided within 30 calendar days; expedited appeals, available when a delay could seriously jeopardize the member's health, are decided within 5 business days once complete documentation is received. Members or their treating providers may request an expedited appeal by phone or through the member portal.",
+      "tags": "prior authorization,appeal,imaging,MRI,utilization management"
+    },
+    {
+      "id": "HLT-KB-02",
+      "source_type": "kb",
+      "title": "Formulary Exception Criteria and Submission Process",
+      "content": "A formulary exception allows a non-preferred or non-covered drug to be covered at a lower cost-sharing tier when medically necessary. Criteria for approval include: documented failure or adverse reaction to preferred formulary alternatives, a clinical letter of medical necessity from the prescribing physician, and confirmation that no equally effective generic or preferred-tier option exists. Requests are reviewed by the Pharmacy and Therapeutics committee, typically within 72 hours for standard requests and 24 hours for expedited requests involving urgent health needs. Approved exceptions are generally valid for 12 months before requiring re-review.",
+      "tags": "formulary,exception,pharmacy,medication,prior authorization"
+    },
+    {
+      "id": "HLT-KB-03",
+      "source_type": "kb",
+      "title": "Billing Dispute Resolution Steps for Duplicate or Incorrect Charges",
+      "content": "When a member disputes a bill, agents should first pull the claim history for the date of service in question and check for duplicate claim numbers, incorrect procedure codes, or coordination-of-benefits errors. Duplicate facility or provider submissions are a common cause of inflated balances and should be corrected via a corrected claim request sent directly to the billing provider. Members should never be advised to pay a disputed amount while a correction request is pending. Standard billing corrections are resolved within 10 business days of the provider confirming the error.",
+      "tags": "billing,dispute,duplicate charge,claims,resolution"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "HLT-FAQ-01",
+      "source_type": "faq",
+      "title": "Why was my prior authorization denied?",
+      "content": "The most common reasons for prior authorization denial are missing clinical documentation, lack of evidence that lower-cost or conservative treatments were tried first, or the requested service not meeting medical necessity criteria for your diagnosis. A denial is not final - you or your provider can submit an appeal with additional clinical information within the appeal window stated on your denial letter.",
+      "tags": "prior authorization,denial,FAQ"
+    },
+    {
+      "id": "HLT-FAQ-02",
+      "source_type": "faq",
+      "title": "How do I dispute a bill I believe is incorrect?",
+      "content": "Call the member services line with your Explanation of Benefits (EOB) and billing statement on hand. An agent will verify your identity, review the claim for errors such as duplicate charges or incorrect codes, and file a corrected claim request with the provider if an error is found. You are not required to pay a disputed amount while the review is in progress.",
+      "tags": "billing,dispute,EOB,FAQ"
+    }
+  ],
+  "policies": [
+    {
+      "id": "HLT-POL-01",
+      "source_type": "policy",
+      "title": "Prior Authorization Appeal Policy",
+      "content": "Clause 6.1: Members or their treating providers may appeal a prior authorization denial within 180 calendar days of the date on the denial notice. Clause 6.2: Standard appeals shall be adjudicated within 30 calendar days of receipt of complete supporting documentation. Clause 6.3: Expedited appeals, applicable when a standard review timeframe could seriously jeopardize the member's life, health, or ability to regain maximum function, shall be adjudicated within 5 business days. Clause 6.4: A denial may not be appealed more than twice for the same episode of care absent new clinical evidence.",
+      "tags": "prior authorization,appeal,policy clause,timeframes"
+    },
+    {
+      "id": "HLT-POL-02",
+      "source_type": "policy",
+      "title": "Pharmacy Formulary Exception Policy",
+      "content": "Clause 9.1: A formulary exception request requires a signed statement of medical necessity from the prescribing physician documenting either a failed trial or a contraindication to the preferred formulary alternative. Clause 9.2: Standard formulary exception requests shall be reviewed within 72 hours of receipt of complete documentation; expedited requests involving exigent circumstances shall be reviewed within 24 hours. Clause 9.3: Approved exceptions remain valid for 12 months, after which re-certification of medical necessity is required. Clause 9.4: Denied exception requests may be appealed under the Prior Authorization Appeal Policy (see Clause 6.1).",
+      "tags": "formulary,exception,pharmacy,policy clause"
+    },
+    {
+      "id": "HLT-POL-03",
+      "source_type": "policy",
+      "title": "HIPAA Identity Verification Policy for Telephone Interactions",
+      "content": "Clause 3.1: No protected health information (PHI), including claim status, billing detail, or clinical authorization outcomes, may be disclosed over the phone until the caller's identity has been verified against two identifiers on file (e.g., full name plus date of birth, or full name plus member ID). Clause 3.2: If the caller is not the member, disclosure of PHI is prohibited unless a valid authorized representative form or Personal Representative designation is on file for that caller. Clause 3.3: Agents must document the verification method used in the case notes for every interaction involving PHI disclosure. Clause 3.4: Failure to verify identity prior to PHI disclosure constitutes a reportable HIPAA compliance incident.",
+      "tags": "HIPAA,identity verification,PHI,policy clause,compliance"
+    }
+  ],
+  "sops": [
+    {
+      "id": "HLT-SOP-01",
+      "source_type": "sop",
+      "title": "SOP-HLT-05: Handling Prior Authorization Appeals",
+      "content": "Step 1: Verify the member's identity using two identifiers (name plus DOB or member ID) per HIPAA disclosure policy before discussing any claim or authorization detail. Step 2: Identify the specific denial reason code from the utilization management record. Step 3: Explain the denial reason to the member in plain language and identify what additional documentation would address it (e.g., clinical notes, physician letter of medical necessity). Step 4: Contact or direct the member to contact the ordering/treating provider to obtain the needed documentation. Step 5: Determine whether the case qualifies for expedited review (risk of serious harm from delay) and file the appeal accordingly. Step 6: Set a follow-up reminder aligned to the 5-business-day (expedited) or 30-calendar-day (standard) decision window and document all steps in the case file.",
+      "tags": "SOP,prior authorization,appeal,HIPAA verification"
+    },
+    {
+      "id": "HLT-SOP-02",
+      "source_type": "sop",
+      "title": "SOP-HLT-08: Handling Member Billing Disputes",
+      "content": "Step 1: Verify the member's identity using two identifiers per HIPAA disclosure policy before discussing any billing or claim detail. Step 2: Request the Explanation of Benefits (EOB) or billing statement date of service in question. Step 3: Pull the full claim history for that date of service and check for duplicate claim submissions, incorrect procedure or diagnosis codes, and coordination-of-benefits errors. Step 4: If an error is identified, file a corrected claim request with the provider's billing office and advise the member they are not required to pay the disputed amount while the correction is pending. Step 5: Document the dispute reason, correction filed, and expected resolution timeline (standard 10 business days) in the case file. Step 6: If no billing error is found, explain the charge breakdown to the member and offer information on available payment plans or financial assistance programs.",
+      "tags": "SOP,billing,dispute,HIPAA verification"
+    }
+  ]
+}

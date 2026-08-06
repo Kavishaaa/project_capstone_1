@@ -1,0 +1,201 @@
+{
+  "industry": "Utilities",
+  "customers": [
+    {
+      "id": "UTL-CUST-001",
+      "name": "Harold Jennings",
+      "email": "harold.jennings@example.com",
+      "phone": "+1-614-555-0133",
+      "account_number": "ELEC-4471029",
+      "policy_or_account_type": "Residential Electric Service",
+      "tier": "Standard",
+      "since": "2016-09-04",
+      "notes": "Lives in a storm-prone service area; has called twice before about outage-related credits. Prefers phone contact."
+    },
+    {
+      "id": "UTL-CUST-002",
+      "name": "Denise Okafor",
+      "email": "denise.okafor@example.com",
+      "phone": "+1-773-555-0187",
+      "account_number": "GAS-7789215",
+      "policy_or_account_type": "Commercial Gas Account",
+      "tier": "Commercial",
+      "since": "2019-02-18",
+      "notes": "Owns a small bakery; account is billed monthly on actual meter reads. Sensitive to billing accuracy since costs pass through to business margins."
+    },
+    {
+      "id": "UTL-CUST-003",
+      "name": "Marisol Fuentes",
+      "email": "marisol.fuentes@example.com",
+      "phone": "+1-505-555-0164",
+      "account_number": "WTR-3302587",
+      "policy_or_account_type": "Water & Sewer Service",
+      "tier": "Standard",
+      "since": "2020-11-30",
+      "notes": "Recently lost seasonal employment; account is current but customer has proactively reached out about upcoming payment difficulty."
+    }
+  ],
+  "tickets": [
+    {
+      "id": "UTL-TKT-1001",
+      "customer_id": "UTL-CUST-001",
+      "subject": "Outage credit request - 14-hour unplanned power outage",
+      "description": "Customer's power was out for approximately 14 hours following a severe storm, causing spoiled refrigerated food. Customer is requesting a bill credit per the outage credit policy.",
+      "resolution": "Verified outage duration against the outage management system log (13.8 hours, unplanned, non-customer-caused). Applied a $75 outage credit to the account per Clause 9.1 threshold for outages exceeding 12 hours, and issued a $25 goodwill credit for spoiled food per manager discretion guideline.",
+      "status": "Resolved",
+      "priority": "Medium",
+      "channel": "Phone",
+      "agent_name": "Latoya Simmons",
+      "handle_time_minutes": 16,
+      "csat_score": 5,
+      "first_contact_resolution": true,
+      "created_at": "2026-06-18T10:12:00"
+    },
+    {
+      "id": "UTL-TKT-1002",
+      "customer_id": "UTL-CUST-002",
+      "subject": "Disputed high gas bill - suspected meter reading error",
+      "description": "Customer's latest bill for the bakery (GAS-7789215) was $612, roughly triple the seasonal average of $210. Customer suspects a meter misread rather than actual usage increase.",
+      "resolution": "Opened a re-read request per the billing dispute SOP. Field technician re-read the meter and found the prior reading had been transposed (entered as 84,213 instead of 48,213), causing an inflated usage calculation. Bill was corrected to $198 and the erroneous charge was reversed in full.",
+      "status": "Resolved",
+      "priority": "High",
+      "channel": "Chat",
+      "agent_name": "Trevor Nakamura",
+      "handle_time_minutes": 21,
+      "csat_score": 4,
+      "first_contact_resolution": false,
+      "created_at": "2026-07-02T13:47:00"
+    },
+    {
+      "id": "UTL-TKT-1003",
+      "customer_id": "UTL-CUST-003",
+      "subject": "Request for hardship payment plan - water & sewer account",
+      "description": "Customer recently lost seasonal employment and is concerned about ability to pay upcoming water and sewer bills. Account is currently in good standing with no missed payments.",
+      "resolution": "Enrolled customer in the Hardship Deferral Payment Plan, spreading the next two billing cycles' balances over 6 equal monthly installments with no interest or late fees. Confirmed disconnection moratorium protections apply while enrolled and in good standing on the plan.",
+      "status": "Resolved",
+      "priority": "Medium",
+      "channel": "Phone",
+      "agent_name": "Latoya Simmons",
+      "handle_time_minutes": 18,
+      "csat_score": 5,
+      "first_contact_resolution": true,
+      "created_at": "2026-07-21T09:05:00"
+    }
+  ],
+  "transcripts": [
+    {
+      "id": "UTL-CONV-2001",
+      "customer_id": "UTL-CUST-001",
+      "subject": "Outage credit request after storm-related power loss",
+      "status": "Resolved",
+      "agent_name": "Latoya Simmons",
+      "turns": [
+        {"sender": "customer", "text": "Hi, my power was out for over half a day after that storm on Tuesday. I lost a whole fridge and freezer full of food. Can I get some kind of credit for that?"},
+        {"sender": "agent", "text": "I'm sorry to hear that, Harold. Let me pull up your account, ELEC-4471029, and check the outage log for your service address."},
+        {"sender": "customer", "text": "Okay. It went out around 9pm Tuesday and didn't come back until almost 11am Wednesday."},
+        {"sender": "agent", "text": "I can confirm that in our outage management system - it shows 13.8 hours, logged as an unplanned outage caused by storm damage to a distribution line, not anything on your end."},
+        {"sender": "customer", "text": "Right, it definitely wasn't anything I did. So is there a credit for that?"},
+        {"sender": "agent", "text": "Yes - under our outage credit policy, any unplanned outage lasting more than 12 continuous hours qualifies for an automatic bill credit. I'm applying a $75 credit to your account right now."},
+        {"sender": "customer", "text": "That's good to hear. What about the food I lost though? That's got to be worth more than that."},
+        {"sender": "agent", "text": "I can also add a $25 goodwill credit for the spoiled food, which is the maximum I can apply directly. For anything beyond that, you're welcome to file a formal property claim, but most customers find the combined $100 credit sufficient."},
+        {"sender": "customer", "text": "That works for me, thanks for taking care of it so quickly."}
+      ]
+    },
+    {
+      "id": "UTL-CONV-2002",
+      "customer_id": "UTL-CUST-002",
+      "subject": "Billing dispute - suspected meter misread on commercial gas account",
+      "status": "Resolved",
+      "agent_name": "Trevor Nakamura",
+      "turns": [
+        {"sender": "customer", "text": "I run a bakery and just got a gas bill for $612. That's almost three times what I normally pay. Something has to be wrong."},
+        {"sender": "agent", "text": "That does sound unusual, Denise. Let me look at account GAS-7789215 and compare this reading to your usage history."},
+        {"sender": "customer", "text": "My ovens run about the same every month, we haven't changed anything."},
+        {"sender": "agent", "text": "I see your average bill over the last six months is around $210, so this reading is a significant outlier. That points to a possible meter reading error rather than an actual usage spike."},
+        {"sender": "customer", "text": "That's what I was afraid of, but also kind of relieved to hear - I thought maybe I had a leak."},
+        {"sender": "agent", "text": "I'm going to open a re-read request so a field technician can verify the actual meter reading against what was recorded. This usually takes 3-5 business days."},
+        {"sender": "customer", "text": "Okay, and if it turns out it was a mistake, do I get the difference back?"},
+        {"sender": "agent", "text": "Yes - if the re-read confirms an error, we correct the bill to reflect actual usage and reverse any overcharge automatically, no need for you to call back and request it."},
+        {"sender": "customer", "text": "Great, I appreciate you taking this seriously instead of just telling me to pay it."}
+      ]
+    }
+  ],
+  "kb_articles": [
+    {
+      "id": "UTL-KB-01",
+      "source_type": "kb",
+      "title": "Outage Credit Eligibility Rules",
+      "content": "Customers are automatically eligible for a bill credit when an unplanned outage affecting their service address lasts longer than 12 continuous hours, as confirmed by the outage management system (OMS) log. The standard credit is $75 for residential accounts and $150 for commercial accounts. Outages caused by planned maintenance (with advance notice of at least 48 hours), customer-side equipment failure, or non-payment disconnection do not qualify. Agents may apply an additional goodwill credit of up to $25 for reported spoiled perishables without requiring a formal claim; larger losses should be directed to the property claims process.",
+      "tags": "outage,credit,eligibility,storm,OMS"
+    },
+    {
+      "id": "UTL-KB-02",
+      "source_type": "kb",
+      "title": "Meter Reading Dispute and Re-Read Process",
+      "content": "When a customer disputes a bill as significantly higher than their historical usage pattern (typically more than 50% above the trailing 6-month average with no known cause), agents should open a re-read request rather than assuming the usage is accurate. A field technician physically re-reads the meter within 3-5 business days and compares it to the recorded reading. Common causes of misreads include transposed digits, reading the wrong meter at multi-unit properties, or estimated reads standing in for missed manual reads. If the re-read confirms an error, the bill is corrected and any overcharge is reversed automatically; no separate credit request is needed from the customer.",
+      "tags": "billing,dispute,meter,re-read,error"
+    },
+    {
+      "id": "UTL-KB-03",
+      "source_type": "kb",
+      "title": "Hardship Payment Plan Qualification",
+      "content": "Customers experiencing temporary financial hardship (job loss, medical emergency, or documented income disruption) may qualify for the Hardship Deferral Payment Plan, which spreads outstanding and upcoming balances over 6 to 12 equal monthly installments with no interest or late fees. Eligibility requires the account to be in good standing (no more than one missed payment in the prior 12 months) at the time of enrollment. Customers enrolled in an active hardship plan are protected from disconnection for non-payment as long as they remain current on installment payments.",
+      "tags": "hardship,payment plan,disconnection,eligibility"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "UTL-FAQ-01",
+      "source_type": "faq",
+      "title": "Why is my bill higher than usual this month?",
+      "content": "A higher-than-usual bill is most often caused by seasonal usage changes (heating or cooling), rate changes, or an estimated meter read that was later corrected. If your bill is more than 50% above your typical average with no clear cause, ask us to open a meter re-read request - if an error is confirmed, the overcharge is reversed automatically.",
+      "tags": "billing,high bill,FAQ"
+    },
+    {
+      "id": "UTL-FAQ-02",
+      "source_type": "faq",
+      "title": "How do I request a credit for a power outage?",
+      "content": "If your outage lasted more than 12 continuous hours and was not caused by planned maintenance or an issue on your side of the meter, you automatically qualify for a bill credit. Call customer service with your account number and the approximate outage start and end times so the agent can verify the duration against the outage log and apply the credit.",
+      "tags": "outage,credit,FAQ"
+    }
+  ],
+  "policies": [
+    {
+      "id": "UTL-POL-01",
+      "source_type": "policy",
+      "title": "Service Reliability and Outage Credit Policy",
+      "content": "Clause 9.1: Any unplanned outage exceeding 12 continuous hours at a customer's service address entitles the customer to an automatic bill credit of $75 for residential accounts and $150 for commercial accounts. Clause 9.2: Outages resulting from scheduled maintenance with at least 48 hours' advance customer notice, or from equipment on the customer's side of the meter, are excluded from credit eligibility. Clause 9.3: Credits under this policy must be applied within one billing cycle of outage confirmation in the outage management system.",
+      "tags": "outage,credit,threshold,policy clause"
+    },
+    {
+      "id": "UTL-POL-02",
+      "source_type": "policy",
+      "title": "Billing Dispute and Meter Re-Read Policy",
+      "content": "Clause 11.1: A customer may dispute a billed amount by requesting a meter re-read when usage deviates materially, defined as more than 50%, from their trailing 6-month average without a documented cause. Clause 11.2: Upon dispute, a field technician shall perform a physical re-read within 5 business days of the request. Clause 11.3: If the re-read confirms a recording error, the account shall be corrected to reflect verified usage and any resulting overcharge reversed in full within the same billing cycle, without requiring further action from the customer.",
+      "tags": "billing,dispute,re-read,policy clause"
+    },
+    {
+      "id": "UTL-POL-03",
+      "source_type": "policy",
+      "title": "Hardship Disconnection Moratorium Policy",
+      "content": "Clause 14.1: Customers enrolled in an approved Hardship Deferral Payment Plan may not be disconnected for non-payment of the balances covered by that plan, provided all scheduled installment payments are made on time. Clause 14.2: Eligibility for enrollment requires the account to have no more than one missed payment in the preceding 12 months. Clause 14.3: A customer who misses two consecutive installment payments under an active hardship plan forfeits moratorium protection and becomes subject to standard disconnection procedures after a 10-day cure notice.",
+      "tags": "hardship,disconnection,moratorium,policy clause"
+    }
+  ],
+  "sops": [
+    {
+      "id": "UTL-SOP-01",
+      "source_type": "sop",
+      "title": "SOP-UTL-05: Processing Outage Credit Requests",
+      "content": "Step 1: Confirm the customer's account number and service address. Step 2: Look up the outage in the outage management system (OMS) and record the logged start and end times. Step 3: Verify the outage duration exceeds 12 continuous hours and was not caused by planned maintenance with 48+ hours' notice or customer-side equipment. Step 4: If eligible, apply the standard credit ($75 residential / $150 commercial) directly to the account. Step 5: If the customer reports spoiled perishables, apply up to a $25 goodwill credit without requiring a formal claim; refer larger losses to the property claims team. Step 6: Document the outage reference ID and credit amount in the case file.",
+      "tags": "SOP,outage,credit,processing"
+    },
+    {
+      "id": "UTL-SOP-02",
+      "source_type": "sop",
+      "title": "SOP-UTL-08: Handling Billing Disputes for Suspected Meter Errors",
+      "content": "Step 1: Compare the disputed bill against the customer's trailing 6-month usage average. Step 2: If usage deviates by more than 50% with no known cause (new equipment, seasonal change, rate change), classify as a suspected meter reading error. Step 3: Open a field re-read request and communicate the 3-5 business day turnaround to the customer. Step 4: Upon receiving the re-read result, compare it against the originally recorded reading. Step 5: If an error is confirmed, correct the bill and reverse the overcharge automatically within the same billing cycle. Step 6: If no error is found, explain the verified usage to the customer and offer a payment plan if the balance creates hardship.",
+      "tags": "SOP,billing,dispute,meter error"
+    }
+  ]
+}

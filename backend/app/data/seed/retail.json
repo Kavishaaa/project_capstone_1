@@ -1,0 +1,201 @@
+{
+  "industry": "Retail",
+  "customers": [
+    {
+      "id": "RTL-CUST-001",
+      "name": "Elena Marchetti",
+      "email": "elena.marchetti@example.com",
+      "phone": "+1-212-555-0119",
+      "account_number": "ACC-4471209",
+      "policy_or_account_type": "Loyalty Rewards - Elite",
+      "tier": "Elite",
+      "since": "2017-09-03",
+      "notes": "Top 1% spend tier. Frequently purchases home goods and electronics. Prefers chat support and expects fast resolutions given loyalty status."
+    },
+    {
+      "id": "RTL-CUST-002",
+      "name": "Jamal Whitfield",
+      "email": "jamal.whitfield@example.com",
+      "phone": "+1-773-555-0187",
+      "account_number": "SCC-9903841",
+      "policy_or_account_type": "Store Credit Card",
+      "tier": "Standard",
+      "since": "2022-11-14",
+      "notes": "Uses store credit card for most purchases. Has disputed a price-match request once before; resolved in his favor."
+    },
+    {
+      "id": "RTL-CUST-003",
+      "name": "Carla Bertolucci",
+      "email": "carla.bertolucci@example.com",
+      "phone": "+1-305-555-0163",
+      "account_number": "ACC-2280576",
+      "policy_or_account_type": "Standard Membership",
+      "tier": "Bronze",
+      "since": "2024-02-27",
+      "notes": "Newer member, low order volume. First reported shipping issue on record."
+    }
+  ],
+  "tickets": [
+    {
+      "id": "RTL-TKT-3001",
+      "customer_id": "RTL-CUST-001",
+      "subject": "Damaged blender return requested past 30-day window",
+      "description": "Customer received a damaged countertop blender (Order #ORD-558102) and wants to return it, but the return was requested on day 38, past the standard 30-day return window. Customer states the damage was not visible until she used it for the first time three weeks after delivery.",
+      "resolution": "Applied the Elite-tier extended return exception under Clause 3.3, which allows up to 45 days for latent-defect claims on damaged goods. Issued a full refund of $89.99 and waived return shipping.",
+      "status": "Resolved",
+      "priority": "Medium",
+      "channel": "Chat",
+      "agent_name": "Melissa Tran",
+      "handle_time_minutes": 11,
+      "csat_score": 5,
+      "first_contact_resolution": true,
+      "created_at": "2026-06-14T15:08:00"
+    },
+    {
+      "id": "RTL-TKT-3002",
+      "customer_id": "RTL-CUST-002",
+      "subject": "Price-match request denied for competitor flash sale",
+      "description": "Customer purchased a 55-inch television for $499 (Order #ORD-561947) and requests a price match after seeing the identical model listed for $429 at a competitor. Initial automated review denied the match because the competitor listing was a limited-time flash sale.",
+      "resolution": "Manually reviewed the competitor listing screenshot the customer provided. Confirmed it met all eligibility criteria except the flash-sale exclusion; however, per Clause 5.4, price-match requests submitted within 24 hours of a documented flash sale are eligible for a one-time courtesy match. Refunded the $70 difference to the store credit card.",
+      "status": "Resolved",
+      "priority": "Medium",
+      "channel": "Email",
+      "agent_name": "Aaron Kessler",
+      "handle_time_minutes": 18,
+      "csat_score": 4,
+      "first_contact_resolution": false,
+      "created_at": "2026-05-29T10:52:00"
+    },
+    {
+      "id": "RTL-TKT-3003",
+      "customer_id": "RTL-CUST-003",
+      "subject": "Order never delivered - marked lost in transit",
+      "description": "Customer's order (Order #ORD-563390, a set of kitchenware valued at $142.50) was marked 'Delivered' by the carrier tracking, but customer states nothing arrived and her building has a secure package room with no unclaimed items logged. It has been 9 days since the marked delivery date.",
+      "resolution": "Opened a carrier trace investigation; carrier confirmed the package was misrouted and scanned as delivered in error. Per Clause 9.2 of the Lost-in-Transit Policy, issued a full refund of $142.50 to original payment method rather than waiting on the carrier trace to conclude, since the claim exceeded the 7-day carrier response SLA.",
+      "status": "Resolved",
+      "priority": "High",
+      "channel": "Phone",
+      "agent_name": "Melissa Tran",
+      "handle_time_minutes": 16,
+      "csat_score": 5,
+      "first_contact_resolution": true,
+      "created_at": "2026-07-02T13:37:00"
+    }
+  ],
+  "transcripts": [
+    {
+      "id": "RTL-CONV-4001",
+      "customer_id": "RTL-CUST-001",
+      "subject": "Damaged blender return past standard window",
+      "status": "Resolved",
+      "agent_name": "Melissa Tran",
+      "turns": [
+        {"sender": "customer", "text": "Hi, I bought a blender from you guys about five weeks ago and it's cracked at the base. I only just used it for the first time last week. I know it's past 30 days but this feels like a manufacturing defect."},
+        {"sender": "agent", "text": "Hi Elena, thanks for reaching out, and I'm sorry about the blender. Let me pull up Order #ORD-558102 to take a look."},
+        {"sender": "customer", "text": "Thanks. I really wasn't trying to sit on it, I just didn't unbox it right away since it was a backup for my old one."},
+        {"sender": "agent", "text": "That makes sense. I can see the order was delivered 38 days ago, so it's past our standard 30-day window, but as an Elite loyalty member you qualify for our extended return exception on damaged goods - that covers up to 45 days for latent defects like a crack that wasn't visible at unboxing."},
+        {"sender": "customer", "text": "Oh that's a relief. So I can get a refund, not just a replacement?"},
+        {"sender": "agent", "text": "Yes, I can process a full refund of $89.99 back to your original payment method, and I'll also waive the return shipping cost given the damage. I'll email you a prepaid return label right now."},
+        {"sender": "customer", "text": "That's great service, thank you. How long until I see the refund?"},
+        {"sender": "agent", "text": "Once the item is scanned at the carrier drop-off, the refund posts within 3-5 business days. Is there anything else I can help with today?"},
+        {"sender": "customer", "text": "No, that covers it. Thanks for making this easy."}
+      ]
+    },
+    {
+      "id": "RTL-CONV-4002",
+      "customer_id": "RTL-CUST-003",
+      "subject": "Kitchenware order marked delivered but never received",
+      "status": "Resolved",
+      "agent_name": "Melissa Tran",
+      "turns": [
+        {"sender": "customer", "text": "I'm really frustrated. My order says it was delivered 9 days ago but I never got it. I checked our building's package room and there's nothing logged under my name."},
+        {"sender": "agent", "text": "I'm sorry to hear that, Carla. Let me look up Order #ORD-563390 for you. I see it's the kitchenware set for $142.50, and yes, the carrier scan shows 'Delivered' on July 24th."},
+        {"sender": "customer", "text": "Right, but it just isn't here. I even asked my neighbors and the front desk staff."},
+        {"sender": "agent", "text": "I believe you, and unfortunately carrier misdeliveries do happen even when a scan shows delivered. I'm going to open a lost-in-transit trace with the carrier right now."},
+        {"sender": "customer", "text": "How long does that usually take? I don't want to wait weeks for my money back."},
+        {"sender": "agent", "text": "Normally the carrier has 7 days to respond to a trace request. Since your delivery date is already 9 days past and we haven't heard back within that SLA, I can go ahead and process your refund immediately instead of waiting on the carrier."},
+        {"sender": "customer", "text": "Oh, thank you, I really appreciate that. So I don't need to do anything else?"},
+        {"sender": "agent", "text": "Nothing else needed. I'm issuing a full refund of $142.50 back to your original payment method today - you should see it within 3-5 business days."},
+        {"sender": "customer", "text": "That's a relief, thank you for handling this quickly."}
+      ]
+    }
+  ],
+  "kb_articles": [
+    {
+      "id": "RTL-KB-01",
+      "source_type": "kb",
+      "title": "Return Policy Exceptions for Damaged or Defective Items",
+      "content": "Standard returns must be initiated within 30 days of delivery. However, items with a latent defect - meaning damage not reasonably discoverable at the time of unboxing, such as a hidden crack, internal component failure, or manufacturing flaw - qualify for an extended return window of up to 45 days from delivery. Elite and Gold loyalty tier customers additionally receive waived return shipping on any damage-related return regardless of tier-specific windows. Agents should request a photo of the damage when available but may proceed based on customer description alone for orders under $150.",
+      "tags": "returns,damaged,defective,exception,latent defect"
+    },
+    {
+      "id": "RTL-KB-02",
+      "source_type": "kb",
+      "title": "Price-Match Eligibility Rules",
+      "content": "Price-match requests are honored when a customer provides proof of a lower price for an identical item (same brand, model, and color) from an approved competitor, submitted within 14 days of purchase. Standard exclusions include clearance items, marketplace/third-party seller listings, and limited-time flash sales. However, a one-time courtesy exception exists for flash-sale price matches when the request is submitted within 24 hours of the competitor's sale going live and documented with a screenshot or archived listing showing the sale price and timestamp.",
+      "tags": "price match,competitor,eligibility,flash sale,exception"
+    },
+    {
+      "id": "RTL-KB-03",
+      "source_type": "kb",
+      "title": "Lost-in-Transit Claim Process",
+      "content": "When a customer reports non-receipt of an order that the carrier's tracking marks as 'Delivered,' agents should first confirm the delivery address, check for secure package room or neighbor delivery notes, and ask whether the customer has searched the immediate area. If the item still cannot be located, open a carrier trace investigation. Carriers are held to a 7-business-day SLA to respond to trace requests. If the SLA is exceeded without resolution, agents should proceed with a full refund or reshipment without waiting further on the carrier's findings, per the Lost-in-Transit Policy.",
+      "tags": "lost package,shipping,carrier trace,refund,claim process"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "RTL-FAQ-01",
+      "source_type": "faq",
+      "title": "Can I return an item after the 30-day window if it's damaged?",
+      "content": "Yes. If the damage was not visible or discoverable at the time you received the item, you may qualify for an extended return window of up to 45 days under our latent-defect exception. Contact support with your order number and a description (or photo) of the damage.",
+      "tags": "returns,damaged,FAQ,extended window"
+    },
+    {
+      "id": "RTL-FAQ-02",
+      "source_type": "faq",
+      "title": "What do I do if my order shows as delivered but I never received it?",
+      "content": "First check with household members, neighbors, and any building package rooms or lockers. If the item truly cannot be located, contact support so we can open a carrier trace. If the carrier does not resolve the trace within 7 business days, we will issue a full refund or reshipment without further delay.",
+      "tags": "lost package,delivery,FAQ,refund"
+    }
+  ],
+  "policies": [
+    {
+      "id": "RTL-POL-01",
+      "source_type": "policy",
+      "title": "Standard Return Window and Exceptions Policy",
+      "content": "Clause 3.1: Items purchased through EXLSmartAssist-affiliated retail channels may be returned within 30 calendar days of delivery in original or resalable condition for a full refund. Clause 3.2: Items returned between 31 and 45 days are only eligible for return if the item is damaged or defective and the defect was not reasonably discoverable at the time of delivery ('latent defect'). Clause 3.3: Loyalty tier members at Gold tier or above receive an automatic extension of the latent-defect window to 45 days from delivery and are exempt from return shipping fees on any damage-related return. Clause 3.4: Items showing evidence of misuse or damage caused after delivery are not eligible for exception handling under this policy.",
+      "tags": "returns,policy clause,window,exception,damaged"
+    },
+    {
+      "id": "RTL-POL-02",
+      "source_type": "policy",
+      "title": "Price-Match Guarantee Policy",
+      "content": "Clause 5.1: A price match will be honored when the customer presents verifiable evidence of a lower price for an identical item, brand, model, and color from an approved competitor retailer. Clause 5.2: Requests must be submitted within 14 days of the original purchase date. Clause 5.3: Clearance-priced items, third-party marketplace listings, and time-limited flash sales are excluded from standard price-match eligibility. Clause 5.4: Notwithstanding Clause 5.3, a one-time courtesy price match may be granted for a flash-sale price when the customer submits documented proof (screenshot or archived listing with timestamp) within 24 hours of the competing sale's start.",
+      "tags": "price match,policy clause,competitor,flash sale"
+    },
+    {
+      "id": "RTL-POL-03",
+      "source_type": "policy",
+      "title": "Damaged Goods and Lost-in-Transit Refund Policy",
+      "content": "Clause 9.1: Items reported damaged upon arrival, or determined to have a latent defect under Clause 3.2, are eligible for full refund or replacement at the customer's choice, with return shipping waived. Clause 9.2: Orders confirmed by carrier tracking as 'Delivered' but reported by the customer as not received shall be escalated to a carrier trace investigation. If the carrier does not confirm or resolve the discrepancy within 7 business days of the trace request, the customer is entitled to a full refund or reshipment without further delay, regardless of the outstanding trace status. Clause 9.3: Refunds issued under this policy are credited to the original payment method within 3-5 business days of processing.",
+      "tags": "damaged goods,lost in transit,policy clause,refund"
+    }
+  ],
+  "sops": [
+    {
+      "id": "RTL-SOP-01",
+      "source_type": "sop",
+      "title": "SOP-RTL-02: Processing Return Exceptions for Damaged or Defective Items",
+      "content": "Step 1: Confirm the order number, delivery date, and days elapsed since delivery. Step 2: Determine whether the return falls within the standard 30-day window or requires the latent-defect exception under Clause 3.2. Step 3: For requests between 31 and 45 days, ask the customer to describe or photograph the defect and confirm it was not discoverable at unboxing. Step 4: Check the customer's loyalty tier; Gold tier and above automatically qualify for the 45-day exception and waived return shipping per Clause 3.3. Step 5: Process the refund or replacement and issue a prepaid return label if shipping is waived. Step 6: Log the exception reason in the case notes for quality review.",
+      "tags": "SOP,returns,damaged,exception handling"
+    },
+    {
+      "id": "RTL-SOP-02",
+      "source_type": "sop",
+      "title": "SOP-RTL-05: Handling Lost-in-Transit Claims",
+      "content": "Step 1: Verify the shipping address on file and ask the customer to check secure package rooms, lockers, neighbors, and household members. Step 2: If the item cannot be located, open a carrier trace investigation and provide the customer with an estimated response time of 7 business days. Step 3: Set a follow-up reminder for day 7 if the carrier has not responded. Step 4: If the SLA is exceeded without resolution, proceed directly to issuing a full refund or reshipment per Clause 9.2, without waiting further on the carrier. Step 5: Notify the customer proactively once the refund or reshipment is initiated rather than waiting for them to follow up. Step 6: Document the carrier trace reference number and resolution outcome in the case file.",
+      "tags": "SOP,lost package,carrier trace,refund"
+    }
+  ]
+}

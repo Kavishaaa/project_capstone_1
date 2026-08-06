@@ -1,0 +1,201 @@
+{
+  "industry": "Banking",
+  "customers": [
+    {
+      "id": "BNK-CUST-001",
+      "name": "Jonathan Reyes",
+      "email": "jonathan.reyes@example.com",
+      "phone": "+1-213-555-0187",
+      "account_number": "4471-8823-0091-5567",
+      "policy_or_account_type": "Credit Card - Platinum Rewards",
+      "tier": "Gold",
+      "since": "2019-06-15",
+      "notes": "No prior disputes on file. Enrolled in SMS fraud alerts. Prefers phone contact for anything urgent."
+    },
+    {
+      "id": "BNK-CUST-002",
+      "name": "Angela Whitfield",
+      "email": "a.whitfield@example.com",
+      "phone": "+1-615-555-0142",
+      "account_number": "MTG-55102284",
+      "policy_or_account_type": "Mortgage Loan",
+      "tier": "Standard",
+      "since": "2016-11-02",
+      "notes": "Fixed-rate 30-year mortgage, current on payments until a recent job loss. Requested hardship assistance; escalation-sensitive given long tenure."
+    },
+    {
+      "id": "BNK-CUST-003",
+      "name": "Michael Tanaka",
+      "email": "michael.tanaka@example.com",
+      "phone": "+1-503-555-0165",
+      "account_number": "CHK-33087721",
+      "policy_or_account_type": "Checking Account",
+      "tier": "Platinum",
+      "since": "2022-02-28",
+      "notes": "Also holds linked savings account SAV-44219087. No overdraft history prior to this incident; automatic transfer overdraft protection was not yet enabled at time of incident."
+    }
+  ],
+  "tickets": [
+    {
+      "id": "BNK-TKT-3001",
+      "customer_id": "BNK-CUST-001",
+      "subject": "Disputed credit card transaction - unrecognized merchant charge",
+      "description": "Customer identified a $687.42 charge from 'TechGear Direct Online' on his Platinum Rewards card statement that he did not authorize and has never shopped with this merchant.",
+      "resolution": "Agent opened a formal Regulation E/Reg Z dispute case, issued a provisional credit of $687.42 within 2 business days, and referred the transaction to the Fraud Investigations team; card was cancelled and reissued with a new number.",
+      "status": "Resolved",
+      "priority": "High",
+      "channel": "Phone",
+      "agent_name": "Latisha Brown",
+      "handle_time_minutes": 18,
+      "csat_score": 5,
+      "first_contact_resolution": true,
+      "created_at": "2026-03-10T10:15:00"
+    },
+    {
+      "id": "BNK-TKT-3002",
+      "customer_id": "BNK-CUST-003",
+      "subject": "Overdraft fee waiver request - direct deposit timing",
+      "description": "Customer incurred two $35 overdraft fees when his payroll direct deposit posted a day later than usual, causing two scheduled bill payments to overdraw his checking account.",
+      "resolution": "Agent verified this was the customer's first overdraft occurrence in the trailing 12 months and applied a courtesy waiver for both $35 fees ($70 total) per the Overdraft Fee Waiver Policy; also enabled low-balance text alerts to prevent recurrence.",
+      "status": "Resolved",
+      "priority": "Medium",
+      "channel": "Chat",
+      "agent_name": "Carlos Mendez",
+      "handle_time_minutes": 12,
+      "csat_score": 5,
+      "first_contact_resolution": true,
+      "created_at": "2026-05-19T13:47:00"
+    },
+    {
+      "id": "BNK-TKT-3003",
+      "customer_id": "BNK-CUST-002",
+      "subject": "Mortgage payment deferral request - temporary hardship",
+      "description": "Customer lost her job and requested a temporary deferral of mortgage payments while she secures new employment; asked whether missed payments would affect her credit score or trigger foreclosure proceedings.",
+      "resolution": "Escalated to the Mortgage Servicing Hardship team; customer was approved for a 3-month forbearance plan under the Hardship Assistance Program, with deferred payments added to the end of the loan term and no negative credit reporting during the forbearance period.",
+      "status": "Escalated",
+      "priority": "High",
+      "channel": "Phone",
+      "agent_name": "Latisha Brown",
+      "handle_time_minutes": 26,
+      "csat_score": 4,
+      "first_contact_resolution": false,
+      "created_at": "2026-06-08T09:30:00"
+    }
+  ],
+  "transcripts": [
+    {
+      "id": "BNK-CONV-4001",
+      "customer_id": "BNK-CUST-001",
+      "subject": "Unauthorized credit card charge dispute",
+      "status": "Resolved",
+      "agent_name": "Latisha Brown",
+      "turns": [
+        {"sender": "customer", "text": "Hi, I'm looking at my Platinum Rewards card statement and there's a charge for $687.42 from something called 'TechGear Direct Online' that I never made."},
+        {"sender": "agent", "text": "I'm sorry to hear that, Jonathan. Let me pull up the account on card ending in 5567. Can you confirm the last four digits of your card for verification?"},
+        {"sender": "customer", "text": "Sure, it's 5567."},
+        {"sender": "agent", "text": "Thank you, that's confirmed. I see the charge posted on March 8th. Do you recall ever shopping with this merchant, even a subscription or a one-time purchase a while back?"},
+        {"sender": "customer", "text": "No, never heard of them. I still have my physical card in my wallet right now, so it wasn't lost or stolen."},
+        {"sender": "agent", "text": "Understood - that helps confirm this looks like card-not-present fraud. I'm opening a formal dispute right now and issuing a provisional credit of $687.42 to your account within 2 business days while our Fraud Investigations team looks into it."},
+        {"sender": "customer", "text": "That's a relief. Will I need to do anything else on my end?"},
+        {"sender": "agent", "text": "I'll email you a dispute affidavit to sign and return within 10 days, and I'm also cancelling your current card and mailing a replacement with a new number, which should arrive in 5-7 business days."},
+        {"sender": "customer", "text": "Thank you so much, that's exactly what I needed to hear."}
+      ]
+    },
+    {
+      "id": "BNK-CONV-4002",
+      "customer_id": "BNK-CUST-003",
+      "subject": "Overdraft fee waiver negotiation",
+      "status": "Resolved",
+      "agent_name": "Carlos Mendez",
+      "turns": [
+        {"sender": "customer", "text": "I just noticed I got hit with two overdraft fees this week, $35 each. My paycheck was just late, this doesn't feel fair."},
+        {"sender": "agent", "text": "I understand the frustration, Michael. Let me take a look at your checking account activity around those dates."},
+        {"sender": "customer", "text": "I've never overdrafted before. This was literally just my direct deposit posting a day late."},
+        {"sender": "agent", "text": "I see that here - your payroll deposit posted on the 18th instead of the 17th as usual, and two automatic bill payments went through before it landed, which triggered the two $35 fees."},
+        {"sender": "customer", "text": "Right, exactly. Is there anything you can do about it?"},
+        {"sender": "agent", "text": "Since this is your first overdraft occurrence in the past 12 months, you qualify for a courtesy waiver under our Overdraft Fee Waiver Policy. I can reverse both fees right now."},
+        {"sender": "customer", "text": "That would be amazing, thank you."},
+        {"sender": "agent", "text": "Done - $70 has been credited back to your account and will reflect within 1 business day. I'd also recommend enabling low-balance text alerts so you get a heads-up before this happens again."},
+        {"sender": "customer", "text": "Yes, please set that up for me."}
+      ]
+    }
+  ],
+  "kb_articles": [
+    {
+      "id": "BNK-KB-01",
+      "source_type": "kb",
+      "title": "Regulation E Dispute Resolution Timelines for Electronic Transactions",
+      "content": "Under Regulation E, the Bank must investigate a customer's notice of an unauthorized electronic fund transfer and resolve it within 10 business days. If the investigation cannot be completed in that window, the Bank may take up to 45 calendar days total, provided a provisional credit is issued to the customer's account within the initial 10 business days. For point-of-sale debit transactions and transactions on accounts opened within the prior 30 days, the investigation period may extend to 90 days, with a provisional credit issued within 20 business days. Agents should always issue the provisional credit before the investigation concludes so the customer has access to disputed funds.",
+      "tags": "regulation e,dispute,timeline,electronic transfer,provisional credit"
+    },
+    {
+      "id": "BNK-KB-02",
+      "source_type": "kb",
+      "title": "Overdraft Fee Waiver Eligibility Guidelines",
+      "content": "Customers who incur their first overdraft fee within a rolling 12-month period are eligible for a one-time courtesy waiver, which agents may apply directly without supervisor approval. A second waiver within the same 12-month period requires supervisor sign-off and should only be granted where a documented hardship (job loss, medical emergency, banking error) exists. No more than two courtesy waivers may be issued per customer per rolling 12-month period. Agents should verify overdraft history in the account timeline before offering a waiver.",
+      "tags": "overdraft,fee waiver,eligibility,checking"
+    },
+    {
+      "id": "BNK-KB-03",
+      "source_type": "kb",
+      "title": "Required Documentation for Fraud Claims",
+      "content": "When opening a fraud claim, agents must collect: (1) a signed dispute affidavit confirming the transaction(s) were not authorized, (2) a list of all disputed transaction dates and amounts, (3) confirmation of whether the physical card, PIN, or account credentials remain in the customer's sole possession, and (4) for cases involving suspected identity theft or losses exceeding $500, a police report or FTC identity theft report. Incomplete documentation delays final resolution beyond the initial provisional credit period.",
+      "tags": "fraud,documentation,dispute affidavit,identity theft"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "BNK-FAQ-01",
+      "source_type": "faq",
+      "title": "How long does it take to resolve a disputed transaction?",
+      "content": "Most disputes are resolved within 10 business days, during which a provisional credit is issued to your account. Complex cases, including those involving point-of-sale debit transactions or newly opened accounts, may take up to 45 or 90 days respectively, but the provisional credit is issued much sooner so you are not without your funds during the investigation.",
+      "tags": "dispute,timeline,FAQ,provisional credit"
+    },
+    {
+      "id": "BNK-FAQ-02",
+      "source_type": "faq",
+      "title": "Can my overdraft fees be waived?",
+      "content": "Yes. If this is your first overdraft fee in the past 12 months, you are generally eligible for a one-time courtesy waiver, which an agent can apply during your call or chat. A second waiver within the same 12-month period may be granted with supervisor approval in cases of documented hardship.",
+      "tags": "overdraft,fee waiver,FAQ,checking"
+    }
+  ],
+  "policies": [
+    {
+      "id": "BNK-POL-01",
+      "source_type": "policy",
+      "title": "Electronic Fund Transfer Dispute Policy (Regulation E Compliance)",
+      "content": "Clause 5.1: Upon receipt of a customer's notice of an unauthorized electronic fund transfer, the Bank shall investigate and resolve the error within 10 business days of notification. Clause 5.2: If the Bank is unable to complete its investigation within 10 business days, it may extend the investigation to a total of 45 calendar days, provided a provisional credit for the disputed amount is issued to the customer's account within the initial 10-business-day window. Clause 5.3: For point-of-sale debit card transactions, and for transactions occurring on accounts opened within the preceding 30 days, the investigation period may be extended to 90 calendar days, with the provisional credit issued within 20 business days of notification.",
+      "tags": "regulation e,dispute,policy clause,electronic transfer"
+    },
+    {
+      "id": "BNK-POL-02",
+      "source_type": "policy",
+      "title": "Overdraft Fee Waiver Policy",
+      "content": "Clause 3.1: A customer who incurs their first overdraft fee within a rolling 12-month period is eligible for a one-time courtesy waiver, which front-line agents are authorized to apply without escalation. Clause 3.2: A second waiver within the same rolling 12-month period requires supervisor approval and is limited to cases with documented hardship. Clause 3.3: Overdraft fees are capped at $35 per item, with no more than 3 overdraft fees assessed per customer per calendar day, per the Bank's published overdraft fee schedule.",
+      "tags": "overdraft,fee waiver,policy clause,checking"
+    },
+    {
+      "id": "BNK-POL-03",
+      "source_type": "policy",
+      "title": "Cardholder Fraud Liability and Zero-Liability Protection Policy",
+      "content": "Clause 8.1: Cardholders who report the loss or theft of a credit or debit card prior to any unauthorized use bear no liability for subsequent fraudulent transactions. Clause 8.2: Under the Bank's Zero Liability Policy, cardholders are not held responsible for unauthorized transactions on credit or debit cards provided the loss is reported within 60 days of the applicable statement date. Clause 8.3: For unauthorized electronic fund transfers involving a debit card or PIN not covered by the Zero Liability Policy, cardholder liability is limited to $50 if reported within 2 business days of discovery, up to $500 if reported within 60 days, and may be unlimited thereafter under Regulation E.",
+      "tags": "fraud liability,zero liability,policy clause,card dispute"
+    }
+  ],
+  "sops": [
+    {
+      "id": "BNK-SOP-01",
+      "source_type": "sop",
+      "title": "SOP-BNK-02: Handling Disputed Transaction and Fraud Claims",
+      "content": "Step 1: Verify the customer's identity and confirm possession of the physical card or account credentials. Step 2: Identify the specific disputed transaction(s), including date, amount, and merchant. Step 3: Open a formal dispute case and issue a provisional credit within the applicable Regulation E timeline. Step 4: Send the customer a dispute affidavit and, if warranted, cancel and reissue the affected card. Step 5: Refer the case to the Fraud Investigations team and log the expected resolution window in the case file. Step 6: Follow up with the customer if the investigation approaches the SLA deadline without resolution.",
+      "tags": "SOP,fraud,dispute,card cancellation"
+    },
+    {
+      "id": "BNK-SOP-02",
+      "source_type": "sop",
+      "title": "SOP-BNK-05: Escalation Procedure for Mortgage Hardship and High-Risk Fraud Cases",
+      "content": "Step 1: Identify whether the case qualifies as high-risk (fraud losses exceeding $1,000, suspected identity theft, or a hardship request affecting loan payments). Step 2: For mortgage hardship requests, gather the reason for hardship and confirm current payment status before referring to the Mortgage Servicing Hardship team. Step 3: For high-risk fraud cases, escalate immediately to the Fraud Investigations team with a priority flag and place a temporary hold on the affected card or account. Step 4: Communicate a clear timeline and next point of contact to the customer, avoiding vague assurances. Step 5: Document the escalation reason, receiving team, and expected contact window in the case file. Step 6: Notify the Team Lead if the customer expresses significant dissatisfaction or CSAT risk.",
+      "tags": "SOP,escalation,mortgage hardship,fraud"
+    }
+  ]
+}
